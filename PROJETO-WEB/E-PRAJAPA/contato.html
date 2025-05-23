@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contato</title>
+    <link rel="stylesheet" href="./src/css/reset.css" />
+    <link rel="stylesheet" href="./src/css/responsivocontato.css" />
+    <link rel="stylesheet" href="./src/css/estilocontato.css" />
+</head>
+<div class="container">
+    <header>
+        <div class="nav-container">
+            <nav>
+                <a href="index.html">
+                    <img id="logo" src="./src/imagens/logo.png" alt="logo E-PRAJAPA" />
+                </a>
+
+                <ul class="btn-ul">
+                    <li>
+                        <a href="index.html"><button class="btn-home"><strong>Home</strong></button></a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <body id="contato">
+        <main>
+            <div class="bc-container">
+                <img class="bc-img" src="./src/imagens/back-contato.jpg" alt="background_contato" />
+            </div>
+            <section>
+                <div>
+                    <a href="https://eprajapa.ccmpedidoonline.com.br/" target="_blank">
+                        <img class="pedido" src="./src/imagens/pedido.png" alt="Faça seu Pedido" />
+                    </a>
+                </div>
+
+                
+
+                <form action="https://api.staticforms.xyz/submit" method="post">
+                    <label>Nome</label>
+                    <input type="text" name="name" placeholder="Digite seu nome" autocomplete="off" required />
+                    <label>Email</label>
+                    <input type="email" name="email" placeholder="Digite seu email" autocomplete="off" required />
+                    <label>Mensagem</label>
+                    <textarea name="message" cols="30" rows="10" placeholder="Digite sua mensagem" required></textarea>
+                    <button type="submit">Enviar</button>
+                    <input type="hidden" name="accessKey" value="042be0d3-84fa-4ae8-aaed-2434cda72cac" />
+                    <input type="hidden" name="redirectTo" value="http://127.0.0.1:5501/obrigado.html" />
+                </form>
+
+                <aside class="menu-lateral">
+                    <ul>
+                        <li>
+                            <a href="https://www.facebook.com/EPRAJAPA1/" target="_blank">
+                                <img src="./src/imagens/facebook.png" alt="ícone GitHub" class="icone" />
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.instagram.com/eprajapa/" target="_blank">
+                                <img src="./src/imagens/instagram.png" alt="ícone LinkedIn" class="icone" />
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://api.whatsapp.com/send?phone=5521979984218&text=Quero%20um%20Japa"
+                                target="_blank">
+                                <img src="./src/imagens/whatsapp.png" target="_blank" class="wattsapp" />
+                            </a>
+                        </li>
+                    </ul>
+                </aside>
+            </section>
+        </main>
+    </body>
+
+</html>

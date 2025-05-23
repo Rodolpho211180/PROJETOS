@@ -1,0 +1,26 @@
+pip install chatterbot==1.0.4
+
+pip install pytz
+
+pip install PyPDF2
+
+pip install wikipedia
+
+pip install google-api-python-client
+
+
+================================================================================
+
+alterar linha sql alchemy compact.py 
+
+if win32 or jython:
+    time_func = time.perf_counter
+else:
+    time_func = time.time
+================================================================================
+
+
+
+
+
+

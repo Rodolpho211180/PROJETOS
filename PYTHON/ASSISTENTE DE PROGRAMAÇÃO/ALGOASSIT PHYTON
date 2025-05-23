@@ -1,0 +1,111 @@
+from chatterbot import ChatBot
+from chatterbot.trainers import ChatterBotCorpusTrainer
+import sqlite3
+from PyPDF2 import PdfReader
+import wikipedia
+import yaml
+import time
+
+# Função para extrair texto de um arquivo PDF
+def extrair_texto_pdf(nome_arquivo):
+    texto = ''
+    with open(nome_arquivo, 'rb') as file:
+        reader = PdfReader(file)
+        num_pages = len(reader.pages)
+        for page_num in range(num_pages):
+            page = reader.pages[page_num]
+            texto += page.extract_text()
+    return texto
+
+# Função para treinar o chatbot com base no texto extraído
+def treinar_chatbot_com_livro(chatbot, nome_arquivo_pdf):
+    texto = extrair_texto_pdf(nome_arquivo_pdf)
+    trainer = ChatterBotCorpusTrainer(chatbot)
+    trainer.train(texto)
+
+# Função para iniciar a conversa com o chatbot
+def iniciar_conversa(chatbot):
+    print("Olá! Como posso ajudá-lo hoje com Python?")
+
+# Função para interagir com o chatbot
+def interagir(chatbot, conexao, usuario):
+    cursor = conexao.cursor()
+    cursor.execute("""
+    CREATE TABLE IF NOT EXISTS conversas (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        usuario TEXT NOT NULL,
+        pergunta TEXT NOT NULL,
+        resposta TEXT NOT NULL,
+        satisfatorio BOOLEAN,
+        resposta_corrigida TEXT
+    )
+    """)
+    
+    # Verificar se a coluna resposta_corrigida já existe
+    cursor.execute("PRAGMA table_info(conversas)")
+    columns = cursor.fetchall()
+    column_names = [column[1] for column in columns]
+    
+    if 'resposta_corrigida' not in column_names:
+        # Adicionar coluna resposta_corrigida, se ainda não existir
+        cursor.execute("""
+        ALTER TABLE conversas 
+        ADD COLUMN resposta_corrigida TEXT
+        """)
+        conexao.commit()
+    
+    while True:
+        try:
+            user_input = input("Usuário: ")
+            if user_input.lower() == "sair":
+                break
+            
+            # Armazenar a pergunta do usuário
+            cursor.execute("INSERT INTO conversas (usuario, pergunta) VALUES (?, ?)", (usuario, user_input))
+            conexao.commit()
+            
+            response = chatbot.get_response(user_input)
+            # Verificar se o usuário está satisfeito com a resposta
+            satisfatorio = input("Você está satisfeito com a resposta? (sim/não): ").lower() == "sim"
+            
+            # Armazenar a resposta do bot e se foi satisfatória ou não
+            cursor.execute("UPDATE conversas SET resposta = ?, satisfatorio = ? WHERE usuario = ? AND pergunta = ?", (str(response), satisfatorio, usuario, user_input))
+            conexao.commit()
+            
+            print("Bot: ", response)
+            
+            if not satisfatorio:
+                # Lidar com a insatisfação do usuário
+                melhoria = input("O que poderia ser melhorado? ")
+                # Armazenar a resposta do usuário para análise e treinamento futuro
+                cursor.execute("UPDATE conversas SET resposta_corrigida = ? WHERE usuario = ? AND pergunta = ?", (melhoria, usuario, user_input))
+                conexao.commit()
+                print("Obrigado pelo seu feedback! Vamos tentar melhorar.")
+                
+            # Fechar o loop while e sair do programa se o usuário desejar
+            if input("Deseja continuar? (sim/não): ").lower() != "sim":
+                break
+        
+        except KeyboardInterrupt:
+            print("A interação foi interrompida.")
+            break
+        
+        except Exception as e:
+            print(f"Ocorreu um erro: {str(e)}")
+
+# Função para treinar o chatbot
+def treinar_chatbot(chatbot):
+    trainer = ChatterBotCorpusTrainer(chatbot)
+    trainer.train("chatterbot.corpus.portuguese")
+    print("Chatbot treinado com sucesso!")
+
+# Configurar a conexão com o banco de dados SQLite
+conexao = sqlite3.connect("chatbot.db")
+
+# Configurar e treinar o chatbot
+chatbot = ChatBot("PyBot")
+treinar_chatbot(chatbot)
+
+# Iniciar a interação com o chatbot
+iniciar_conversa(chatbot)
+interagir(chatbot, conexao, "Nome_do_usuário")
