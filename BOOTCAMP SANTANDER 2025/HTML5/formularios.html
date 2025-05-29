@@ -6,7 +6,10 @@
     <title><strong>FORMULARIOS</strong></title>
 </head>
 <body>
-    <form name="SIGUINUP" method="post" action="#">
+    <form name="SIGUINUP" autocomplete="off" method="post" action="#"><!-- auto complete off 
+                                                                        não completa as informações do campo caso retone ao site, 
+                                                                        metodo post eo mais indicado para paginas de loguin pois 
+                                                                        as inormações do campo não aparecem nas url -->  
         <label>USUARIO </label><input type="text"><br><br>
         <label>SENHA  </label><input type="password"><br><br>
         <button type="submit">ENVIAR</button> 
