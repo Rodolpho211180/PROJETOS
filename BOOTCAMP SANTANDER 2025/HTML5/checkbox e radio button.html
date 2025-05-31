@@ -15,11 +15,14 @@
     <form name="MONTE SUA PIZZA" autocomplete="off" method="get" action="#">
       
       <label>SELECIONE O SABOR</label><br>
-        <input type="checkbox" name="sabor[]" value="mussarela"> MUSSARELA<br>
+        <input type="checkbox" name="sabor[]" value="mussarela"> MUSSARELA<br> 
         <input type="checkbox" name="sabor[]" value="calabresa"> CALABRESA<br>
         <input type="checkbox" name="sabor[]" value="frango"> FRANGO<br>
         <input type="checkbox" name="sabor[]" value="portuguesa"> PORTUGUESA<br>    
-        <input type="checkbox" name="sabor[]" value="vegetariana"> VEGETARIANA<br><br>
+        
+        <!-- O valor [] e para que ao marcar mais de uma checkbox o 
+        navegador entenda e repasse uma lista 
+        para o beckend ( servidor ) e não o ultimo item selecionado-->
 
        <label>SELECIONE O TAMANHO</label><br><br> 
         <input type="radio" name="tamanho" value="pequena"> PEQUENA<br>
