@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <H3><strong>MONTE SUA PIZZA SABORES</strong></H3>
+
+    <p>Selecione os sabores, tamanho, molho e adicionais da sua pizza.</p>
+    <p>Você pode escolher mais de um sabor, mais de um adicional e apenas um tamanho e molho.</p>
+    <p>Você também pode escolher se quer borda recheada e o sabor da borda.</p>
+
+    <form name="MONTE SUA PIZZA" autocomplete="off" method="get" action="#">
+        <label>SELECIONE O SABOR</label><br>
+        <input type="checkbox" name="sabor[]" value="mussarela"> MUSSARELA<br>
+        <input type="checkbox" name="sabor[]" value="calabresa"> CALABRESA<br>
+        <input type="checkbox" name="sabor[]" value="frango"> FRANGO<br>
+        <input type="checkbox" name="sabor[]" value="portuguesa"> PORTUGUESA<br>    
+        <input type="checkbox" name="sabor[]" value="vegetariana"> VEGETARIANA<br><br>
+
+        <label>SELECIONE O TAMANHO</label><br><br>  
+
+        <input type="radio" name="tamanho" value="pequena"> PEQUENA<br>
+        <input type="radio" name="tamanho" value="media"> MÉDIA<br>
+        <input type="radio" name="tamanho" value="grande"> GRANDE<br>
+        <input type="radio" name="tamanho" value="maracana"> MARACANÃ<br><br>
+
+        <label>SELECIONE O MOLHO</label><br><BR>
+        <input type="radio" name="molho" value="sem_molho"> SEM MOLHO<br>
+        <input type="radio" name="molho" value="tomate"> MOLHO DE TOMATE<br>        
+        <input type="radio" name="molho" value="branco"> MOLHO BRANCO<br>
+        <input type="radio" name="molho" value="pesto"> MOLHO PESTO<br><br>
+
+        <label>SELECIONE O QUE QUER ADICIONAR</label><br><br>
+
+        <input type="checkbox" name="adcional[]" value="palmito"> + PALMITO<br>
+        <input type="checkbox" name="adcional[]" value="champignon"> + CHAMPIGNON<br>
+        <input type="checkbox" name="adcional[]" value="bacon"> + BACON<br>
+        <input type="checkbox" name="adcional[]" value="palmito"> + PALMITO<br> 
+        <input type="checkbox" name="adcional[]" value="azeitonas"> + AZEITONAS<br>
+        <input type="checkbox" name="adcional[]" value="tomate"> + TOMATE<br>  
+        <input type="checkbox" name="adcional[]" value="milho"> + MILHO<br>
+        <input type="checkbox" name="adcional[]" value="queijo"> + QUEIJO<br>
+        <input type="checkbox" name="adcional[]" value="calabresa"> + CALABRESA<br>
+        <input type="checkbox" name="adcional[]" value="cebola"> + CEBOLA<br><br>
+
+        <label>BORDA</label><br><br>
+
+
+        <input type="radio" name="borda" value="sim"> SIM<br>
+        <input type="radio" name="borda" value="nao"> NÃO<br><br>
+
+        <label>SELECIONE SABOR DA BORDA</label><br><br>
+
+
+        <input type="radio" name="sabor_borda" value="caupiry"> CATUPIRY<br>
+        <input type="radio" name="sabor_borda" value="cheddar"> CHEDDAR<br><BR>
+
+           
+
+        <button type="submit">ENVIAR</button>
+</body>
+</html>
