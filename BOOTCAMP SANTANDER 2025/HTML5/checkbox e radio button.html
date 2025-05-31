@@ -13,28 +13,27 @@
     <p>Você também pode escolher se quer borda recheada e o sabor da borda.</p>
 
     <form name="MONTE SUA PIZZA" autocomplete="off" method="get" action="#">
-        <label>SELECIONE O SABOR</label><br>
+      
+      <label>SELECIONE O SABOR</label><br>
         <input type="checkbox" name="sabor[]" value="mussarela"> MUSSARELA<br>
         <input type="checkbox" name="sabor[]" value="calabresa"> CALABRESA<br>
         <input type="checkbox" name="sabor[]" value="frango"> FRANGO<br>
         <input type="checkbox" name="sabor[]" value="portuguesa"> PORTUGUESA<br>    
         <input type="checkbox" name="sabor[]" value="vegetariana"> VEGETARIANA<br><br>
 
-        <label>SELECIONE O TAMANHO</label><br><br>  
-
+       <label>SELECIONE O TAMANHO</label><br><br> 
         <input type="radio" name="tamanho" value="pequena"> PEQUENA<br>
         <input type="radio" name="tamanho" value="media"> MÉDIA<br>
         <input type="radio" name="tamanho" value="grande"> GRANDE<br>
         <input type="radio" name="tamanho" value="maracana"> MARACANÃ<br><br>
 
-        <label>SELECIONE O MOLHO</label><br><BR>
+       <label>SELECIONE O MOLHO</label><br><BR>
         <input type="radio" name="molho" value="sem_molho"> SEM MOLHO<br>
         <input type="radio" name="molho" value="tomate"> MOLHO DE TOMATE<br>        
         <input type="radio" name="molho" value="branco"> MOLHO BRANCO<br>
         <input type="radio" name="molho" value="pesto"> MOLHO PESTO<br><br>
 
-        <label>SELECIONE O QUE QUER ADICIONAR</label><br><br>
-
+       <label>SELECIONE O QUE QUER ADICIONAR</label><br><br>
         <input type="checkbox" name="adcional[]" value="palmito"> + PALMITO<br>
         <input type="checkbox" name="adcional[]" value="champignon"> + CHAMPIGNON<br>
         <input type="checkbox" name="adcional[]" value="bacon"> + BACON<br>
@@ -46,31 +45,23 @@
         <input type="checkbox" name="adcional[]" value="calabresa"> + CALABRESA<br>
         <input type="checkbox" name="adcional[]" value="cebola"> + CEBOLA<br><br>
 
-        <label>BORDA</label><br><br>
-
-
+      <label>BORDA</label><br><br>
         <input type="radio" name="borda" value="sim"> SIM<br>
         <input type="radio" name="borda" value="nao"> NÃO<br><br>
 
-        <lable>SELECIONE TAMANHO DA BORDA</lable><br><br>
-
+       <lable>SELECIONE TAMANHO DA BORDA</lable><br><br>
         <input type="radio" name="tamanho_borda" value="nenhum"> NENHUM<br>
         <input type="radio" name="tamanho_borda" value="pequena"> PEQUENA<br>
         <input type="radio" name="tamanho_borda" value="media"> MÉDIA<br>
         <input type="radio" name="tamanho_borda" value="grande"> GRANDE<br><br>
 
-
-        <lable> SELECIONE TAMANHO DA BORDA </lable><br><br>
-        <input type="radio" name="sabor_borda" value="caupiry"> CATUPIRY<br>
-        <input type="radio" name="sabor_borda" value="cheddar"> CHEDDAR<br><BR>
-
-        <label>BEBIDAS</label><br><BR>
-
-        <input type="radio" name="" value="refrigerante">REFRIGERANTE<br>
-        <input type="radio" name="" value="agua"> AGUA<br>        
-        <input type="radio" name="" value="suco"> SUCO<br>
-        <input type="radio" name="" value="mate"> mate<br><br>
+       <label>BEBIDAS</label><br><BR>
+        <input type="radio" name="bebidas" value="refrigerante">REFRIGERANTE<br>
+        <input type="radio" name="bebidas" value="agua"> AGUA<br>        
+        <input type="radio" name="bebidas" value="suco"> SUCO<br>
+        <input type="radio" name="bebidas" value="mate"> mate<br>
+        <input type="radio" name="bebidas" value="nenhum"> NENHUM<br><br>
         
-        <button type="submit">ENVIAR2</button>
+        <button type="submit">ENVIAR</button>
 </body>
 </html>
