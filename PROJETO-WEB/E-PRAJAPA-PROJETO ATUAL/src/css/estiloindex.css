@@ -1,0 +1,487 @@
+/* Reset e configurações globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Montserrat:wght@400;700&display=swap');
+
+body {
+     overflow: hidden; /* Remove barra de rolagem */
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    font-family: 'Poppins', sans-serif;
+    max-width: 1280px;
+    margin: 0 auto;
+    background-color: #FFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    max-width: 1920px;
+    width: 100%;
+    position: relative;
+    margin-left: auto;
+	    margin-right: auto;
+}
+
+	/* Cabeçalho e logo */
+header {
+    position: relative;
+    top: 0;
+    height: 165px;
+    width: 100%;
+}
+
+.logo {
+    
+    position: fixed;
+    top: -60px;
+    left: 4px;
+    right: unset;
+    z-index: 100;
+    transition: transform 0.3s ease-in-out;
+}
+
+.logo img {
+	width: 250px;
+    height: auto;
+    display: block;
+}
+.logo:hover,
+.menu-lateral .icone:hover,
+.googleplay:hover,
+.itunes:hover,
+.wattsapp:hover,
+.pedido:hover {
+    transform: scale(1.2);
+}
+
+
+
+/* Navbar */
+nav {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 1318px;
+    height: 90px;
+    background-size: cover;
+    z-index: 1;
+}
+
+.nav-container {
+    max-width: 1280px;
+    position: fixed;
+}
+
+.nav-container ul {
+    float: right;
+    height: 100px;
+    line-height: 100px;
+    margin: 0;
+}
+
+.nav-container ul li {
+    list-style: none;
+    float: left;
+    margin: 0 15px;
+}
+
+.nav-container li a {
+    text-decoration: none;
+    color: #FFFF;
+    outline-color: #FF0000;
+    transition: 0.5s;
+}
+
+.nav-container li a:hover {
+    color: #FF0000;
+}
+.conteudo-titulo {
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 10;
+    padding: 40px 30px;
+    border-radius: 18px;
+    
+}
+.conteudo-tituloapp {
+    position: fixed;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 10;
+    padding: 40px 15px;
+    border-radius: 18px;
+    
+}
+
+#titulo {
+    font-family: 'Optima', sans-serif;
+    font-size: 2.5rem;
+    color: #FFF;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-shadow: 6px 6px 24px rgba(0,0,0,0.9);
+}
+
+
+#titulo-app {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    color: #FFF;
+    text-align: center;
+    margin-bottom: 8px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-shadow: 6px 6px 24px rgba(0,0,0,0.9);
+}
+
+.btn-contato {
+    text-decoration: none;
+    color: #FFF;
+    outline-color: #FFF;
+    background-color: #FF0000;
+    display: block;
+    border: none;
+    padding: 20px 50px;
+    text-align: center;
+    font-size: 18px;
+    font-family: 'Poppins', Arial, sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin: 4px 2px 4px 0;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.5s, color 0.5s;
+    align-self: flex-start;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.btn-contato:hover {
+    color: #000;
+    background-color: #FFF;
+    text-decoration: none;
+}
+
+/* Slider */
+#slider {
+    max-width: 100vw;
+    max-height: 500px;
+    margin: 40px auto 0 auto;
+    position: fixed;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+#slider img {
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    transition: opacity 1000ms;
+    z-index: -1;
+}
+
+#slider img.selected {
+    opacity: 1;
+    z-index: 1;
+}
+
+/* Gradiente de fundo */
+main:after {
+    content: '';
+    min-height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: linear-gradient(90deg, rgba(0, 0, 10, 0.21) 0%, rgba(0, 0, 10, 0.21) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00000a", endColorstr="#00000a", GradientType=1);
+    z-index: -1;
+}
+
+/* Conteúdo */
+.conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin-top: 40px;
+}
+
+.conteudo-titulo {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   /* centraliza verticalmente */
+    align-items: center;       /* centraliza horizontalmente */
+    padding: 40px 10px 40px 10px;
+    z-index: 10;
+    background: transparent;   /* ou remova se não quiser fundo */
+}
+
+.descricao {
+    width: 100%;
+    font-size: 70px;
+    color: #fff;
+    text-align: center;
+    line-height: 100px;
+    margin: 20px 0;
+}
+
+.informativo {
+    width: 100%;
+    font-size: 30px;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    margin: 20px 0;
+}
+
+/* Menu lateral */
+.menu-lateral {
+    position: fixed;
+    top: 40px;
+    right: 14px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.menu-lateral ul {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.menu-lateral .icone {
+    width: 40px;
+    transition: 0.3s ease-in-out;
+}
+
+/* Botões e links fixos */
+.googleplay, .itunes, .pedido {
+    position: fixed;
+    width: 150px;
+    bottom: 20px;
+    transition: 0.3s ease-in-out;
+}
+
+.googleplay {
+    left: 750px;
+    bottom: 80px;
+}
+
+.itunes {
+    right: 750px;
+    bottom: 80px;
+}
+
+.pedido {
+    left: 15px;
+    bottom: 20px;
+}
+
+.wattsapp {
+    position: fixed;
+    width: 80px;
+    height: 80px;
+    bottom: 30px;
+    right: 20px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 100px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 1px 1px 2px #888;
+    z-index: 1000;
+    transition: 0.3s ease-in-out;
+}
+
+/* Responsividade */
+@media (max-width: 1200px) {
+    /* Ajustes para desktops médios */
+    .logo img { width: 200px; height: auto; }
+}
+
+@media (max-width: 900px) {
+    .logo {
+        position: fixed;
+        top: 5px;
+        left: 20px;
+        right: unset;
+        z-index: 100;
+        transition: transform 0.3s ease-in-out;
+    }
+    .logo img {
+        width: 300px ;
+        height: auto !important;
+    }
+    .pedido {
+        position: fixed;
+        left: 20px;
+        bottom: 40px;
+        width: 80px;
+        z-index: 100;
+    }
+    .menu-lateral {
+        position: static;
+        width: 100%;
+        min-height: unset;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+    }
+    .menu-lateral ul {
+        flex-direction: row;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .menu-lateral .icone {
+        width: 30px;
+    }
+    .googleplay, .itunes {
+        width: 80px !important;
+        height: auto !important;
+        display: block !important;
+        margin: 10px auto !important;
+        position: static !important;
+        }
+
+    .google, .apple {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+     .wattsapp {
+        width: 60px !important;
+        height: 60px !important;
+        display: block !important;
+        margin: 10px auto !important;
+        position: static !important;
+    }
+    #slider img {
+        max-width: 100vw;
+        max-height: 40vh;
+        object-fit: cover;
+    }
+    .descricao {
+        font-size: 24px;
+    }
+    .informativo {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .logo img {
+        width: 80px !important;
+        height: auto !important;
+    }
+    .pedido {
+        width: 50px;
+        bottom: 20px;
+    }
+    #titulo {
+        font-size: 1.3rem;
+        padding: 0 5px;
+    }
+    #titulo-app {
+        font-size: 1rem;
+        padding: 0 5px;
+    }
+    .btn-contato {
+        padding: 8px 10px;
+        font-size: 0.9rem;
+        top: 5px;
+        right: 5px;
+    }
+    .conteudo-titulo, .conteudo-tituloapp {
+        padding: 10px 2px;
+        min-height: 60vh;
+    }
+    .googleplay, .itunes, .pedido, .wattsapp {
+        width: 50px;
+        height: 50px;
+        margin: 5px;
+    }
+    .menu-lateral {
+        width: 100%;
+        min-height: unset;
+        position: static;
+        margin-top: 10px;
+    }
+    .menu-lateral ul {
+        flex-direction: row;
+        gap: 10px;
+    }
+    .descricao {
+        font-size: 18px;
+    }
+    .informativo {
+        font-size: 14px;
+    }
+    .conteudo {
+        margin-top: 10px;
+        gap: 10px;
+    }
+      .googleplay, .itunes {
+        width: 50px !important;
+        height: auto !important;
+        display: block !important;
+        margin: 5px auto !important;
+        position: static !important;
+    }
+
+    google, .apple {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        width: 100%;
+        margin-bottom: 5px;
+    }
+    .wattsapp {
+        width: 40px !important;
+        height: 40px !important;
+        display: block !important;
+        margin: 5px auto !important;
+        position: static !important;
+    }
+}

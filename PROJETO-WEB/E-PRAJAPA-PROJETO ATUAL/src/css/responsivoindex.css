@@ -1,0 +1,69 @@
+@media (max-width: 1280px) {
+    body {
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 900px) {
+    .menu-lateral {
+        position: static;
+        min-height: auto;
+        width: 100%;
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .menu-lateral ul {
+        flex-direction: row;
+        gap: 20px;
+        margin-left: 0;
+    }
+    .menu-lateral .icone {
+        max-width: 30px;
+    }
+    .conteudo {
+        min-height: 70vh;
+        gap: 30px;
+    }
+    .googleplay, .itunes, .pedido {
+        width: 110px;
+        position: static;
+        margin: 10px 5px 0 0;
+    }
+    .wattsapp {
+        width: 60px;
+        height: 60px;
+        bottom: 20px;
+        right: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    .logo-header img {
+        max-width: 120px;
+    }
+    .descricao {
+        font-size: 30px;
+        width: 90%;
+        line-height: 1.2;
+        margin: 0 auto;
+    }
+    .informativo {
+        font-size: 18px;
+        width: 90%;
+        margin: 0 auto;
+    }
+    #slider img {
+        height: 200px;
+    }
+    .googleplay, .itunes, .pedido {
+        width: 80px;
+    }
+    .conteudo {
+        gap: 20px;
+    }
+    body {
+        padding: 10px;
+    }
+}
