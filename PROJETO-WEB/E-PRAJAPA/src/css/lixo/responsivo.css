@@ -1,0 +1,208 @@
+@media (max-width: 1280px) {
+	body {
+		padding: 0 40px;
+	}
+}
+
+@media (max-width: 768px) {
+	.informacoes {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.informacoes .descricao {
+		width: 60%;
+		text-align: center;
+	}
+}
+
+@media (max-width: 425px) {
+	.informacoes .logo {
+		max-width: 300px;
+	}
+
+	.informacoes .descricao {
+		width: 100%;
+	}
+
+	.menu-lateral {
+		position: static;
+		min-height: auto;
+		width: 100%;
+		margin-top: 50px;
+	}
+
+	.menu-lateral ul {
+		flex-direction: row;
+	}
+
+	.conteudo {
+		min-height: 70vh;
+		gap: 50px;
+	}
+
+	body {
+		padding: 40px;
+	}
+}
+
+@media (max-width: 1280px) {
+	body {
+		padding: 0px;
+	}
+}
+
+@media (max-width: 768px) {
+
+	.informacoes {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.imagem {
+		top: 0;
+		left: 0;
+		width: 100%;
+		min-height: 100vh;
+		z-index: -1;
+	}
+	 .conteudo .logo {
+		max-width: 230px;
+		margin-top:10px;
+		right: -10px;
+	}
+	
+ .informacoes .descricao {
+		max-width: 100%;
+		font-size: 45px;
+		margin-right:0px;
+		margin-bottom: 300px;
+		line-height: 50px;
+		text-align: center;
+		justify-content: center;
+		align-items: center;
+	}
+
+ .informacoes .informativo {
+	 	width: 100%;
+		margin-top: 0px;
+		font-size: 28px;
+		margin-right:-350px;
+		text-align: center;
+		justify-content: center;
+		align-items: center;
+		line-height: 40px;
+		
+	}
+
+	.menu-lateral {
+		position: static;
+		min-height: auto;
+		width: 40%;
+		
+		
+	}
+
+	.slier{
+
+		position: fixed;
+		width: 100%;
+	}
+
+	.menu-lateral ul {
+		margin-left: 25px;
+		flex-direction: flex;
+	}
+
+	.menu-lateral .icone{
+		top: 25px;	
+		max-width: 30px;
+	}
+
+	.wattsapp {
+		position:fixed;
+		max-width:60px;
+		max-height:60px;
+		margin-bottom: 1px;
+		margin-right:-10px;
+	}
+
+	.pedido {
+		max-width:110px;
+		margin-bottom: -16px;
+		margin-left:-15px;
+
+	}
+
+	.googleplay{
+		position: fixed;
+		max-width: 150px;
+		margin-bottom: 180px;
+		margin-left:-606px;
+		
+		
+		
+	}
+	.itunes {
+		position: fixed;
+		max-width: 150px;
+		margin-bottom: 115px;
+		margin-right: -651px;
+		
+		
+		
+	}
+		
+	
+}
+
+@media (max-width: 425px) {
+
+	.informacoes {
+		display: flex;
+		flex-direction: flex;
+		align-items: center;
+	}
+
+	 .logo {
+		max-width: 150px;
+		margin-top:6px;
+		margin-bottom: 5px;
+		left: 100px;
+		
+	}
+      .descricao {
+		width: 70%;
+		font-size: 30px;
+		text-align: center;
+	}
+
+	 .informativo {
+		width: 70%;
+		font-size: 27px;
+		text-align: center;
+	}
+
+	.menu-lateral {
+		position: static;
+		min-height: auto;
+		width: 100%;
+		margin-top: 50px;
+	}
+
+	.menu-lateral ul {
+		flex-direction: flex;
+	}
+
+	.conteudo {
+		min-height: 70vh;
+		gap: 50px;
+	}
+	
+
+	body {
+		padding: 40px;
+	}
+}
