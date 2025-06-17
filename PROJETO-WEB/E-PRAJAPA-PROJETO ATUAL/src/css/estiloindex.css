@@ -5,17 +5,17 @@
     box-sizing: border-box;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Montserrat:wght@400;700&display=swap&family=Poppins:wght@300;400;500;600;700&display=swap');
 
 body {
      overflow: hidden; /* Remove barra de rolagem */
     margin: 0;
     padding: 0;
-    background: #fff;
+    
     font-family: 'Poppins', sans-serif;
     max-width: 1280px;
     margin: 0 auto;
-    background-color: #FFFF;
+   
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,7 +26,7 @@ body {
     width: 100%;
     position: relative;
     margin-left: auto;
-	    margin-right: auto;
+	margin-right: auto;
 }
 
 	/* Cabeçalho e logo */
@@ -36,19 +36,33 @@ header {
     height: 165px;
     width: 100%;
 }
-
+.menu {
+	width: 100%;
+    height: 12%;
+    background-color: #fff;
+	opacity: 40%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+	z-index: 0;
+    align-items: center;
+    justify-content: center;
+    color: #000000; /* Para o texto aparecer */
+}
 .logo {
     
     position: fixed;
-    top: -60px;
-    left: 4px;
+    top: -37px;
+    left: 6px;
     right: unset;
     z-index: 100;
     transition: transform 0.3s ease-in-out;
 }
 
 .logo img {
-	width: 250px;
+	width: 150px;
     height: auto;
     display: block;
 }
@@ -58,7 +72,7 @@ header {
 .itunes:hover,
 .wattsapp:hover,
 .pedido:hover {
-    transform: scale(1.2);
+transform: scale(1.2);
 }
 
 
@@ -131,25 +145,25 @@ nav {
 
 #titulo {
     font-family: 'Optima', sans-serif;
-    font-size: 2.5rem;
+    font-size: 4.5rem;
     color: #FFF;
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: -60px;
     font-weight: 700;
     letter-spacing: 1px;
-    text-shadow: 6px 6px 24px rgba(0,0,0,0.9);
+    text-shadow: 6px 6px 24px rgba(0,0,0,0.1);
 }
 
 
 #titulo-app {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.5rem;
+    font-size: 2.0rem;
     color: #FFF;
     text-align: center;
     margin-bottom: 8px;
     font-weight: 400;
     letter-spacing: 1px;
-    text-shadow: 6px 6px 24px rgba(0,0,0,0.9);
+    text-shadow: 6px 6px 24px rgba(0,0,0,0.1);
 }
 
 .btn-contato {
