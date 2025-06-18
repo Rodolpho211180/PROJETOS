@@ -8,7 +8,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Montserrat:wght@400;700&display=swap&family=Poppins:wght@300;400;500;600;700&display=swap');
 
 body {
-     overflow: hidden; /* Remove barra de rolagem */
+    overflow: hidden; /* Remove barra de rolagem */
     margin: 0;
     padding: 0;
     
@@ -31,41 +31,37 @@ body {
 
 	/* Cabeçalho e logo */
 header {
-    position: relative;
-    top: 0;
-    height: 165px;
-    width: 100%;
+  width: 100%;
+  background: #fff;
+  opacity: 0.9;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 40px;
+  height: 80px;
+  box-shadow: 4px 4px 16px rgba(0,0,0,0.3);
 }
-.menu {
-	width: 100%;
-    height: 12%;
-    background-color: #fff;
-	opacity: 40%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    display: flex;
-	z-index: 0;
-    align-items: center;
-    justify-content: center;
-    color: #000000; /* Para o texto aparecer */
-}
-.menu ul {
+menu {
   list-style: none;
   padding: 0;
   margin: 0;
+  justify-content: center;
   display: flex;
-  gap: 16px; /* Espaço entre os itens */
+  gap: 30px;
 }
 
 .menu li {
   display: inline-block;
+  justify-content: center;
 }
 
-.menu a {
+.botaolista {
   display: block;
-  padding: 10px 20px;
+  padding: 10px 40px;
   color: #222;
   text-decoration: none;
   border-radius: 4px;
@@ -73,7 +69,7 @@ header {
   transition: background-color 0.4s, color 0.4s;
 }
 
-.menu a:hover {
+.botaolista:hover {
   background-color: #e53935;
   color: #fff;
   cursor: pointer;
@@ -81,15 +77,15 @@ header {
 .logo {
     
     position: fixed;
-    top: -37px;
+    top: -30px;
     left: 6px;
     right: unset;
-    z-index: 100;
+    z-index: 110;
     transition: transform 0.3s ease-in-out;
 }
 
 .logo img {
-	width: 150px;
+	width: 145px;
     height: auto;
     display: block;
 }
@@ -105,44 +101,28 @@ transform: scale(1.2);
 
 
 /* Navbar */
-nav {
+.menu-lateral {
     position: fixed;
-    top: 0px;
-    left: 0px;
-    width: 1318px;
-    height: 90px;
-    background-size: cover;
-    z-index: 1;
+    top: 80px; /* Ajuste conforme a altura do header/topo */
+    right: 0;
+    width: 60px;
+    background: transparent;
+    z-index: 200;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
 }
 
-.nav-container {
-    max-width: 1280px;
-    position: fixed;
-}
-
-.nav-container ul {
-    float: right;
-    height: 100px;
-    line-height: 100px;
-    margin: 0;
-}
-
-.nav-container ul li {
+.menu-lateral ul {
     list-style: none;
-    float: left;
-    margin: 0 15px;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
 
-.nav-container li a {
-    text-decoration: none;
-    color: #FFFF;
-    outline-color: #FF0000;
-    transition: 0.5s;
-}
-
-.nav-container li a:hover {
-    color: #FF0000;
-}
 .conteudo-titulo {
     position: fixed;
     top: 10%;
@@ -170,19 +150,19 @@ nav {
     
 }
 
-#titulo {
+.titulo {
     font-family: 'Optima', sans-serif;
     font-size: 4.5rem;
     color: #FFF;
     text-align: center;
-    margin-bottom: -60px;
+    margin-bottom: -300px;
     font-weight: 700;
     letter-spacing: 1px;
-    text-shadow: 6px 6px 24px rgba(0,0,0,0.1);
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.9);
+    
 }
 
-
-#titulo-app {
+.titulo-app {
     font-family: 'Montserrat', sans-serif;
     font-size: 2.0rem;
     color: #FFF;
@@ -190,38 +170,7 @@ nav {
     margin-bottom: 8px;
     font-weight: 400;
     letter-spacing: 1px;
-    text-shadow: 6px 6px 24px rgba(0,0,0,0.1);
-}
-
-.btn-contato {
-    text-decoration: none;
-    color: #FFF;
-    outline-color: #FFF;
-    background-color: #FF0000;
-    display: block;
-    border: none;
-    padding: 20px 50px;
-    text-align: center;
-    font-size: 18px;
-    font-family: 'Poppins', Arial, sans-serif;
-    font-weight: bold;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    margin: 4px 2px 4px 0;
-    cursor: pointer;
-    border-radius: 8px;
-    transition: background-color 0.5s, color 0.5s;
-    align-self: flex-start;
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 1000;
-}
-
-.btn-contato:hover {
-    color: #000;
-    background-color: #FFF;
-    text-decoration: none;
+     text-shadow: 2px 2px 6px rgba(0,0,0,0.9);
 }
 
 /* Slider */
@@ -254,18 +203,7 @@ nav {
     z-index: 1;
 }
 
-/* Gradiente de fundo */
-main:after {
-    content: '';
-    min-height: 100vh;
-    width: 100vw;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: linear-gradient(90deg, rgba(0, 0, 10, 0.21) 0%, rgba(0, 0, 10, 0.21) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00000a", endColorstr="#00000a", GradientType=1);
-    z-index: -1;
-}
+
 
 /* Conteúdo */
 .conteudo {
@@ -353,21 +291,53 @@ main:after {
     bottom: 20px;
 }
 
-.wattsapp {
+
+
+
+ .facebook {
+    width: 60px;
+    height: auto;
+    display: flex;
+    margin-top: 5px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out;
+}
+
+  .instagram {
+    width: 60px;
+    height: auto;
+    display:flex;
+    margin-top: 25px;
+    right: 20px;
+    justify-content: center;
+    align-items: center;
+    
+    transition: transform 0.3s ease-in-out;
+}
+.menu-lateral .wattsapp {
     position: fixed;
     width: 80px;
-    height: 80px;
+    height: auto;
     bottom: 30px;
-    right: 20px;
+    right: 35px;
     background-color: #25d366;
     color: #FFF;
-    border-radius: 100px;
+    border-radius: 300px;
     text-align: center;
     font-size: 30px;
     box-shadow: 1px 1px 2px #888;
-    z-index: 1000;
+    z-index: 10;
     transition: 0.3s ease-in-out;
 }
+
+.menu-lateral .facebook:hover,
+.menu-lateral .instagram:hover,
+.menu-lateral .wattsapp:hover {
+    transform: scale(1.2);
+}
+
 
 /* Responsividade */
 @media (max-width: 1200px) {
