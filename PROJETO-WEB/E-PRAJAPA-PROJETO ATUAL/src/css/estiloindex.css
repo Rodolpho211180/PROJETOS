@@ -8,14 +8,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Montserrat:wght@400;700&display=swap&family=Poppins:wght@300;400;500;600;700&display=swap');
 
 body {
-    overflow: hidden; /* Remove barra de rolagem */
+    overflow: hidden;
+    /* Remove barra de rolagem */
     margin: 0;
     padding: 0;
-    
+
     font-family: 'Poppins', sans-serif;
     max-width: 1280px;
     margin: 0 auto;
-   
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,11 +27,12 @@ body {
     width: 100%;
     position: relative;
     margin-left: auto;
-	margin-right: auto;
+    margin-right: auto;
 }
 
-	/* Cabeçalho e logo */
+/* Cabeçalho e logo */
 header {
+<<<<<<< HEAD
   width: 100%;
   background: #fff;
   opacity: 10%;
@@ -53,6 +55,40 @@ menu {
   justify-content: center;
   display: flex;
   gap: 30px;
+=======
+    width: 100%;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.4);
+    /* só o fundo translúcido */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 40px;
+    box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.3);
+    /* NÃO USE opacity aqui! */
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    left: 0;
+    margin: 0 0 0 -150px;
+    /* 60px da esquerda, ajuste como quiser */
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    gap: 30px;
+>>>>>>> 55a69621170cb63f7fb50ec8cd1b8f7ac80c120b
 }
 
     .container{
@@ -61,40 +97,47 @@ menu {
     }
 
 .menu li {
-  display: inline-block;
-  justify-content: center;
+    display: inline-block;
+    justify-content: center;
 }
 
 .botaolista {
-  display: block;
-  padding: 10px 40px;
-  color: #222;
-  text-decoration: none;
-  border-radius: 4px;
-  font-weight: 600;
-  transition: background-color 0.4s, color 0.4s;
+    display: block;
+    padding: 10px 40px;
+    color: #222;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: background-color 0.4s, color 0.4s;
 }
 
 .botaolista:hover {
-  background-color: #e53935;
-  color: #fff;
-  cursor: pointer;
+    background-color: #e53935;
+    color: #fff;
+    cursor: pointer;
 }
+
+.botaolista.active {
+    background-color: #e53935;
+    color: #fff;
+}
+
 .logo {
-    
-    position: fixed;
-    top: -30px;
-    left: 6px;
+
+    position: relative;
+    top: -5px;
+    left: -20px;
     right: unset;
     z-index: 1;
     transition: transform 0.3s ease-in-out;
 }
 
 .logo img {
-	width: 145px;
+    width: 165px;
     height: auto;
     display: block;
 }
+
 .logo:hover,
 .menu-lateral .icone:hover,
 .googleplay:hover,
@@ -109,7 +152,8 @@ transform: scale(1.2);
 /* Navbar */
 .menu-lateral {
     position: fixed;
-    top: 80px; /* Ajuste conforme a altura do header/topo */
+    top: 80px;
+    /* Ajuste conforme a altura do header/topo */
     right: 0;
     width: 60px;
     background: transparent;
@@ -140,8 +184,9 @@ transform: scale(1.2);
     z-index: 10;
     padding: 40px 30px;
     border-radius: 18px;
-    
+
 }
+
 .conteudo-tituloapp {
     position: fixed;
     top: 70%;
@@ -153,7 +198,7 @@ transform: scale(1.2);
     z-index: 10;
     padding: 40px 15px;
     border-radius: 18px;
-    
+
 }
 
 .titulo {
@@ -164,8 +209,8 @@ transform: scale(1.2);
     margin-bottom: -300px;
     font-weight: 700;
     letter-spacing: 1px;
-    text-shadow: 2px 2px 6px rgba(0,0,0,0.9);
-    
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9);
+
 }
 
 .titulo-app {
@@ -176,7 +221,11 @@ transform: scale(1.2);
     margin-bottom: 8px;
     font-weight: 400;
     letter-spacing: 1px;
+<<<<<<< HEAD
      text-shadow: 2px 2px 6px rgba(0,0,0,0.10);
+=======
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9);
+>>>>>>> 55a69621170cb63f7fb50ec8cd1b8f7ac80c120b
 }
 
 /* Slider */
@@ -226,11 +275,14 @@ transform: scale(1.2);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;   /* centraliza verticalmente */
-    align-items: center;       /* centraliza horizontalmente */
+    justify-content: center;
+    /* centraliza verticalmente */
+    align-items: center;
+    /* centraliza horizontalmente */
     padding: 40px 10px 40px 10px;
     z-index: 10;
-    background: transparent;   /* ou remova se não quiser fundo */
+    background: transparent;
+    /* ou remova se não quiser fundo */
 }
 
 .descricao {
@@ -275,7 +327,9 @@ transform: scale(1.2);
 }
 
 /* Botões e links fixos */
-.googleplay, .itunes, .pedido {
+.googleplay,
+.itunes,
+.pedido {
     position: fixed;
     width: 150px;
     bottom: 20px;
@@ -300,7 +354,7 @@ transform: scale(1.2);
 
 
 
- .facebook {
+.facebook {
     width: 60px;
     height: auto;
     display: flex;
@@ -311,17 +365,18 @@ transform: scale(1.2);
     transition: transform 0.3s ease-in-out;
 }
 
-  .instagram {
+.instagram {
     width: 60px;
     height: auto;
-    display:flex;
+    display: flex;
     margin-top: 25px;
     right: 20px;
     justify-content: center;
     align-items: center;
-    
+
     transition: transform 0.3s ease-in-out;
 }
+
 .menu-lateral .wattsapp {
     position: fixed;
     width: 80px;
@@ -347,8 +402,12 @@ transform: scale(1.2);
 
 /* Responsividade */
 @media (max-width: 1200px) {
+
     /* Ajustes para desktops médios */
-    .logo img { width: 200px; height: auto; }
+    .logo img {
+        width: 200px;
+        height: auto;
+    }
 }
 
 @media (max-width: 900px) {
@@ -360,10 +419,12 @@ transform: scale(1.2);
         z-index: 100;
         transition: transform 0.3s ease-in-out;
     }
+
     .logo img {
-        width: 300px ;
+        width: 300px;
         height: auto !important;
     }
+
     .pedido {
         position: fixed;
         left: 20px;
@@ -371,6 +432,7 @@ transform: scale(1.2);
         width: 80px;
         z-index: 100;
     }
+
     .menu-lateral {
         position: static;
         width: 100%;
@@ -380,6 +442,7 @@ transform: scale(1.2);
         align-items: center;
         margin-top: 20px;
     }
+
     .menu-lateral ul {
         flex-direction: row;
         gap: 20px;
@@ -389,39 +452,47 @@ transform: scale(1.2);
         margin: 0;
         padding: 0;
     }
+
     .menu-lateral .icone {
         width: 30px;
     }
-    .googleplay, .itunes {
+
+    .googleplay,
+    .itunes {
         width: 80px !important;
         height: auto !important;
         display: block !important;
         margin: 10px auto !important;
         position: static !important;
-        }
+    }
 
-    .google, .apple {
+    .google,
+    .apple {
         display: flex !important;
         justify-content: center !important;
         align-items: center !important;
         width: 100%;
         margin-bottom: 10px;
     }
-     .wattsapp {
+
+    .wattsapp {
         width: 60px !important;
         height: 60px !important;
         display: block !important;
         margin: 10px auto !important;
         position: static !important;
     }
+
     #slider img {
         max-width: 100vw;
         max-height: 40vh;
         object-fit: cover;
     }
+
     .descricao {
         font-size: 24px;
     }
+
     .informativo {
         font-size: 20px;
     }
@@ -432,54 +503,71 @@ transform: scale(1.2);
         width: 80px !important;
         height: auto !important;
     }
+
     .pedido {
         width: 50px;
         bottom: 20px;
     }
+
     #titulo {
         font-size: 1.3rem;
         padding: 0 5px;
     }
+
     #titulo-app {
         font-size: 1rem;
         padding: 0 5px;
     }
+
     .btn-contato {
         padding: 8px 10px;
         font-size: 0.9rem;
         top: 5px;
         right: 5px;
     }
-    .conteudo-titulo, .conteudo-tituloapp {
+
+    .conteudo-titulo,
+    .conteudo-tituloapp {
         padding: 10px 2px;
         min-height: 60vh;
     }
-    .googleplay, .itunes, .pedido, .wattsapp {
+
+    .googleplay,
+    .itunes,
+    .pedido,
+    .wattsapp {
         width: 50px;
         height: 50px;
         margin: 5px;
     }
+
     .menu-lateral {
         width: 100%;
         min-height: unset;
         position: static;
         margin-top: 10px;
     }
+
     .menu-lateral ul {
         flex-direction: row;
         gap: 10px;
     }
+
     .descricao {
         font-size: 18px;
     }
+
     .informativo {
         font-size: 14px;
     }
+
     .conteudo {
         margin-top: 10px;
         gap: 10px;
     }
-      .googleplay, .itunes {
+
+    .googleplay,
+    .itunes {
         width: 50px !important;
         height: auto !important;
         display: block !important;
@@ -487,13 +575,15 @@ transform: scale(1.2);
         position: static !important;
     }
 
-    google, .apple {
+    google,
+    .apple {
         display: flex !important;
         justify-content: center !important;
         align-items: center !important;
         width: 100%;
         margin-bottom: 5px;
     }
+
     .wattsapp {
         width: 40px !important;
         height: 40px !important;
