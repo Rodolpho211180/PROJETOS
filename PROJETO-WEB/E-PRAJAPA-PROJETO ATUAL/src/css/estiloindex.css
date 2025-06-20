@@ -32,30 +32,6 @@ body {
 
 /* Cabeçalho e logo */
 header {
-<<<<<<< HEAD
-  width: 100%;
-  background: #fff;
-  opacity: 10%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 40px;
-  height: 80px;
-  box-shadow: 4px 4px 16px rgba(0,0,0,0.3);
-}
-menu {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  z-index: 1;
-  justify-content: center;
-  display: flex;
-  gap: 30px;
-=======
     width: 100%;
     height: 80px;
     background: rgba(255, 255, 255, 0.4);
@@ -88,7 +64,6 @@ nav {
     justify-content: center;
     display: flex;
     gap: 30px;
->>>>>>> 55a69621170cb63f7fb50ec8cd1b8f7ac80c120b
 }
 
     .container{
@@ -221,11 +196,7 @@ transform: scale(1.2);
     margin-bottom: 8px;
     font-weight: 400;
     letter-spacing: 1px;
-<<<<<<< HEAD
-     text-shadow: 2px 2px 6px rgba(0,0,0,0.10);
-=======
     text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9);
->>>>>>> 55a69621170cb63f7fb50ec8cd1b8f7ac80c120b
 }
 
 /* Slider */
