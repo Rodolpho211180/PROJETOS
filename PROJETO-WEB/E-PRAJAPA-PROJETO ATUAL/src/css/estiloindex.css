@@ -33,11 +33,11 @@ body {
 header {
   width: 100%;
   background: #fff;
-  opacity: 0.9;
+  opacity: 10%;
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 100;
+  z-index: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -49,10 +49,16 @@ menu {
   list-style: none;
   padding: 0;
   margin: 0;
+  z-index: 1;
   justify-content: center;
   display: flex;
   gap: 30px;
 }
+
+    .container{
+        z-index: 100;
+        opacity: 100%;
+    }
 
 .menu li {
   display: inline-block;
@@ -80,7 +86,7 @@ menu {
     top: -30px;
     left: 6px;
     right: unset;
-    z-index: 110;
+    z-index: 1;
     transition: transform 0.3s ease-in-out;
 }
 
@@ -170,7 +176,7 @@ transform: scale(1.2);
     margin-bottom: 8px;
     font-weight: 400;
     letter-spacing: 1px;
-     text-shadow: 2px 2px 6px rgba(0,0,0,0.9);
+     text-shadow: 2px 2px 6px rgba(0,0,0,0.10);
 }
 
 /* Slider */
