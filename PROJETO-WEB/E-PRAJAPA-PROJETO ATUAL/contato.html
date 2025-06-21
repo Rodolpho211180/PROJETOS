@@ -5,39 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contato</title>
     <link rel="stylesheet" href="./src/css/reset.css" />
-    <link rel="stylesheet" href="./src/css/responsivocontato.css" />
     <link rel="stylesheet" href="./src/css/estilocontato.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet" />
 </head>
-<body id="contato">
+<body class="contato">
           
-        <main>
+    <main class="container">
 
-              <header>
-                <div class="logo" id="logo">
-                <a href="https://www.eprajapa.com.br/" target="_blank">
-                    <img src="./src/imagens/logo.png" alt="Logo E-PRAJAPA">
-                </a>
+        <div class="bc-container">
+                <img class="bc-img" src="./src/imagens/back-contato.jpg" alt="background_contato" />
             </div>
-            <div class="pedidologo">
+
+    <header>
+      <div class="logo" id="logo">
+        <img src="./src/imagens/logo.png" alt="Logo E-PRAJAPA">
+        </div>
+      <nav>
+        <ul class="menu">
+          <li><a href="index.html" class="botaolista">Início</a></li>
+          <li><a href="cardapio.html" class="botaolista">Cardápio</a></li>
+          <li><a href="sobre.html" class="botaolista">Sobre Nós</a></li>
+          <li><a href="contato.html" class="botaolista active">Contato</a></li>
+        </ul>
+      </nav>
+    </header>
+            
+       <div class="pedidologo">
                 <a href="https://eprajapa.ccmpedidoonline.com.br/" target="_blank">
                     <img class="pedido" src="./src/imagens/pedido.png" alt="Faça seu Pedido">
                 </a>
             </div>
-            <ul class="btn-ul">
-                <li>
-                    <a href="index.html" class="btn-home"><strong>Voltar</strong></a>
-                </li>
-            </ul>
-        </header>
-            <div class="bc-container">
-                <img class="bc-img" src="./src/imagens/back-contato.jpg" alt="background_contato" />
-            </div>
+            
+            
             <section>
-                <div>
-                    <a href="https://eprajapa.ccmpedidoonline.com.br/" target="_blank">
-                        <img class="pedido" src="./src/imagens/pedido.png" alt="Faça seu Pedido" />
-                    </a>
-                </div>
+                <h1 style=color:white font="optional">Entre em contato conosco</h1>
+                
                 <form action="https://api.staticforms.xyz/submit" method="post">
                     <label>Nome</label>
                     <input type="text" name="name" placeholder="Digite seu nome" autocomplete="off" required />
@@ -49,26 +53,26 @@
                     <input type="hidden" name="accessKey" value="042be0d3-84fa-4ae8-aaed-2434cda72cac" />
                     <input type="hidden" name="redirectTo" value="http://127.0.0.1:5501/obrigado.html" />
                 </form>
-                <aside class="menu-lateral">
-                    <ul>
-                        <li>
-                            <a href="https://www.facebook.com/EPRAJAPA1/" target="_blank">
-                                <img src="./src/imagens/facebook.png" alt="ícone Facebook" class="icone" />
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.instagram.com/eprajapa/" target="_blank">
-                                <img src="./src/imagens/instagram.png" alt="ícone Instagram" class="icone" />
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://api.whatsapp.com/send?phone=5521979984218&text=Quero%20um%20Japa" target="_blank">
-                                <img src="./src/imagens/whatsapp.png" class="wattsapp" alt="ícone WhatsApp" />
-                            </a>
-                        </li>
-                    </ul>
-                </aside>
-            </section>
+               
+    </section>
+     <ul class="menu-lateral">
+      <li>
+        <a href="https://www.facebook.com/EPRAJAPA1/" target="_blank">
+          <img src="./src/imagens/facebook.png" alt="ícone facebook" class="facebook">
+        </a>
+      </li>
+      <li>
+        <a href="https://www.instagram.com/eprajapa/" target="_blank">
+          <img src="./src/imagens/instagram.png" alt="ícone instagram" class="instagram">
+        </a>
+      </li>
+      <li>
+        <a href="https://api.whatsapp.com/send?phone=5521979984218&text=Quero%20um%20Japa" target="_blank">
+          <img src="./src/imagens/whatsapp.png" alt="ícone whatsapp" class="wattsapp">
+        </a>
+      </li>
+    </ul>
         </main>
+        <script src="./src/js/script.js"></script>
     </body>
 </html>
