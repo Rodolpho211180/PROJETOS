@@ -101,7 +101,7 @@ nav:after {
     text-decoration: none;
     font-family: 'Poppins', sans-serif;
     border-radius: 4px;
-    font-weight: 800;
+    font-weight: 600;
     transition: background-color 0.4s, color 0.4s;
 }
 
