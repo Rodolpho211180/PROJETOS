@@ -9,13 +9,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Montserrat:wght@400;700&display=swap&family=Poppins:wght@300;400;500;600;700&display=swap');
 
  body{
+     overflow: hidden;
+    /* Remove barra de rolagem */
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    max-width: 1280px;
+    margin: 0 auto;
     display: flex;
-    align-items: center;
     justify-content: center;
-    height: 100%;
+    align-items: center;
 }
 section {
-    margin-top: 120px; /* ajuste o valor conforme necessário */
+    margin-top: 100px; /* ajuste o valor conforme necessário */
 }
 /* Cabeçalho e logo */
 header {
@@ -93,6 +99,7 @@ nav:after {
     padding: 10px 40px;
     color: #222;
     text-decoration: none;
+    font-family: 'Poppins', sans-serif;
     border-radius: 4px;
     font-weight: 800;
     transition: background-color 0.4s, color 0.4s;
