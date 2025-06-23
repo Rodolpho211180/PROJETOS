@@ -388,7 +388,7 @@ transform: scale(1.2);
         left: 20px;
         right: unset;
         z-index: 100;
-        transition: transform 0.3s ease-in-out;
+       
     }
 
     .logo img {
