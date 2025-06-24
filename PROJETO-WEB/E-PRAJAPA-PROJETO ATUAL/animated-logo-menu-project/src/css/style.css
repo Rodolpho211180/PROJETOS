@@ -1,0 +1,50 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+}
+
+.container {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  position: absolute;
+  top: -100px; /* Start above the viewport */
+  animation: fall 1s forwards;
+}
+
+@keyframes fall {
+  0% {
+    top: -100px;
+    opacity: 0;
+  }
+  50% {
+    top: 50%;
+    opacity: 1;
+  }
+  100% {
+    top: 20%; /* Adjust this value to where you want the logo to stop */
+  }
+}
+
+.menu {
+  position: absolute;
+  right: -300px; /* Start off-screen */
+  animation: slideIn 0.5s forwards;
+}
+
+@keyframes slideIn {
+  0% {
+    right: -300px;
+    opacity: 0;
+  }
+  100% {
+    right: 0;
+    opacity: 1;
+  }
+}
