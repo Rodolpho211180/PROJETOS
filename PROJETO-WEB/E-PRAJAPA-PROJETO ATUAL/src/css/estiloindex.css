@@ -3,7 +3,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
 
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Montserrat:wght@400;700&display=swap&family=Poppins:wght@300;400;500;600;700&display=swap');
 
@@ -145,16 +144,9 @@ nav {
     gap: 30px;
 }
 
-<<<<<<< HEAD
+
 /* Conteúdo */
 .conteudo {
-=======
-.conteudo-titulo {
-    position: fixed;
-    top: 15%;
-    left: 50%;
-    transform: translate(-50%, -50%);
->>>>>>> be5c1dfd8070426cc6a2ec08e560e637bc59bf84
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -380,12 +372,7 @@ nav {
         top: 5px;
         left: 20px;
         right: unset;
-<<<<<<< HEAD
-        z-index: 100;
-       
-=======
         z-index: 100;       
->>>>>>> be5c1dfd8070426cc6a2ec08e560e637bc59bf84
     }
 
     .logo img {
@@ -493,13 +480,17 @@ nav {
         top: 5px;
         right: 5px;
     }
-
+    
     .conteudo-titulo,
     .conteudo-tituloapp {
         padding: 10px 2px;
         min-height: 60vh;
     }
-
+ .botaolista {
+    padding: 6px 6px;
+    font-size: 0.9rem;
+  }
+}
     .googleplay,
     .itunes,
     .pedido,
@@ -543,7 +534,7 @@ nav {
         position: static !important;
     }
 
-    google,
+    .google,
     .apple {
         display: flex !important;
         justify-content: center !important;
