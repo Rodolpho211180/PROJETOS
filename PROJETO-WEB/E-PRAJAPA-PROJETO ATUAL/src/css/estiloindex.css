@@ -464,12 +464,12 @@ nav {
         bottom: 20px;
     }
 
-    #titulo {
+    .titulo {
         font-size: 1.3rem;
         padding: 0 5px;
     }
 
-    #titulo-app {
+    .titulo-app {
         font-size: 1rem;
         padding: 0 5px;
     }
@@ -607,11 +607,14 @@ nav {
 
     @media (max-width: 600px) {
         .menu {
-            gap: 10px;
+            gap: 8px;
         }
-
+        .menu li {
+            display: block;
+            text-align: center;
+        }
         .botaolista {
-            padding: 8px 10px;
+            padding: 6px 6px;
             font-size: 0.9rem;
         }
     }
