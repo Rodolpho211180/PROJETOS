@@ -15,14 +15,14 @@
     justify-content: center;
     align-items: center;
   }
- .container {
+  .container {
     max-width: 1920px;
     width: 100%;
     position: relative;
     margin-left: auto;
     margin-right: auto;
   }
-   /* Cabeçalho e logo */
+  /* Cabeçalho e logo */
   header {
     width: 100%;
     height: 70px;
@@ -78,24 +78,21 @@
   }
 
   .logo {
-  display: flex;
-  align-items: center;
-  margin-left: -30px;
-  justify-content: center;
-  position: relative;
-  z-index: 1;
-}
+    display: flex;
+    align-items: center;
+    margin-left: -30px;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+  }
 
-.logo-img {
-  width: 150px; /* ajuste conforme necessário */
-  height: auto;
-  display: block;
-  
-}
+  .logo-img {
+    width: 150px; /* ajuste conforme necessário */
+    height: auto;
+    display: block;
+  }
 
-
- 
-   /* Slider */
+  /* Slider */
   #slider {
     max-width: 100vw;
     max-height: 500px;
@@ -124,7 +121,6 @@
     opacity: 1;
     z-index: 1;
   }
-
 
   #menu {
     list-style: none;
@@ -186,7 +182,7 @@
     display: block;
   }
 
-   .conteudo-titulo {
+  .conteudo-titulo {
     position: relative;
     min-height: 100vh;
     display: flex;
@@ -236,8 +232,8 @@
     letter-spacing: 1px;
     text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9);
   }
-  
-   /* Navbar */
+
+  /* Navbar */
   .menu-lateral {
     position: fixed;
     top: 300px;
@@ -253,8 +249,7 @@
     padding-top: 20px;
   }
 
-
-  .pedido-app{
+  .pedido-app {
     position: fixed;
     top: 300px;
     /* Ajuste conforme a altura do header/topo */
@@ -269,22 +264,16 @@
     padding-top: 20px;
   }
 
-
-
-
-   
   /* Botões e links fixos */
 
-
-    #pedido {
+  #pedido {
     position: fixed;
     width: 120px;
     bottom: 10px;
-    display:block;
+    display: block;
     left: 15px;
     bottom: 20px;
-    }
-    
+  }
 
   #googleplay {
     width: 150px;
@@ -295,11 +284,10 @@
     position: fixed;
     width: 150px;
     height: auto;
-        
   }
 
-   #itunes{
-     width: 150px;
+  #itunes {
+    width: 150px;
     height: auto;
     flex-direction: column;
     left: 750px;
@@ -310,45 +298,40 @@
     position: fixed;
     width: 150px;
     height: auto;
-   
   }
 
-  #googleplay{
-   transition: 0.3s ease-in-out;
-   }
+  #googleplay {
+    transition: 0.3s ease-in-out;
+  }
 
-   #itunes {
-   transition: 0.3s ease-in-out;
-   }
- 
+  #itunes {
+    transition: 0.3s ease-in-out;
+  }
 
- 
-#pedido,
-#googleplay,
-#itunes {
- cursor: pointer;
-  transition: transform 0.3s ease-in-out;
-}
+  #pedido,
+  #googleplay,
+  #itunes {
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
 
+  #pedido:hover,
+  #googleplay:hover,
+  #itunes:hover {
+    transform: scale(1.2);
+  }
 
-#pedido:hover,
-#googleplay:hover,
-#itunes:hover {
-  transform: scale(1.2);
-}
-  
   #facebook {
-    width   : 60px;
+    width: 60px;
     height: auto;
     display: flex;
     margin-top: 5px;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    
   }
 
-   #instagram {
+  #instagram {
     width: 60px;
     height: auto;
     display: flex;
@@ -356,7 +339,6 @@
     right: 20px;
     justify-content: center;
     align-items: center;
-   
   }
 
   .menu-lateral #wattsapp {
@@ -372,15 +354,14 @@
     font-size: 30px;
     box-shadow: 1px 1px 2px #888;
     z-index: 10;
-    
   }
 
-    .menu-lateral #facebook,
-    .menu-lateral #instagram,
-    .menu-lateral #wattsapp {
-        cursor: pointer;
-        transition: transform 0.3s ease-in-out;
-    }  
+  .menu-lateral #facebook,
+  .menu-lateral #instagram,
+  .menu-lateral #wattsapp {
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
 
   .menu-lateral #facebook:hover,
   .menu-lateral #instagram:hover,
@@ -389,24 +370,21 @@
   }
 
   footer {
-   width: 100%;
-  color: #fff;
-  text-align: center;
-  padding: 20px 0;
-  background: transparent; /* ou a cor desejada */
-  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9);
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  z-index: 999;
-}
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    background: transparent; /* ou a cor desejada */
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9);
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 999;
+  }
 
-footer p,
-footer a {
-  margin: 0 auto;
-  display: inline-block;
-}
-
-
-
+  footer p,
+  footer a {
+    margin: 0 auto;
+    display: inline-block;
+  }
 }
