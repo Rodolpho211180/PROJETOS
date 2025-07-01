@@ -50,12 +50,41 @@
     opacity: 100%;
   }
 
-  .menu li {
+  
+
+  .logo {
+    display: flex;
+    align-items: center;
+    left: 10px;
+    top:-42px;
+    justify-content: center;
+    position: fixed;
+    z-index: 1;
+  }
+
+  #logo-img {
+    width: 150px; /* ajuste conforme necessário */
+    height: auto;
+    display: flex;
+    
+  }
+   #menu {
+    list-style: none;
+    padding: 0;
+    left: 0;
+    margin: 0 0 0 -2px;
+    /* 60px da esquerda, ajuste como quiser */
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    gap: 30px;
+  }
+
+  #menu li {
     display: inline-block;
     justify-content: center;
   }
-
-  .botaolista {
+.botaolista {
     display: block;
     padding: 10px 40px;
     color: #222;
@@ -77,20 +106,6 @@
     color: #fff;
   }
 
-  .logo {
-    display: flex;
-    align-items: center;
-    margin-left: -30px;
-    justify-content: center;
-    position: relative;
-    z-index: 1;
-  }
-
-  .logo-img {
-    width: 150px; /* ajuste conforme necessário */
-    height: auto;
-    display: block;
-  }
 
   /* Slider */
   #slider {
@@ -122,66 +137,8 @@
     z-index: 1;
   }
 
-  #menu {
-    list-style: none;
-    padding: 0;
-    left: 0;
-    margin: 0 0 0 -140px;
-    /* 60px da esquerda, ajuste como quiser */
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    gap: 30px;
-  }
-
-  #container {
-    z-index: 100;
-    opacity: 100%;
-  }
-
-  #menu li {
-    display: inline-block;
-    justify-content: center;
-  }
-
-  .botaolista {
-    display: block;
-    padding: 10px 40px;
-    color: #222;
-    text-decoration: none;
-
-    font-family: "Poppins", sans-serif;
-    border-radius: 4px;
-    font-weight: 600;
-    transition: background-color 0.4s, color 0.4s;
-  }
-
-  .botaolista:hover {
-    background-color: #e53935;
-    color: #fff;
-    cursor: pointer;
-  }
-
-  .botaolista.active {
-    background-color: #e53935;
-    color: #fff;
-  }
-
-  #logo {
-    position: relative;
-    top: -5px;
-    left: -20px;
-    right: unset;
-    z-index: 1;
-    transition: transform 0.3s ease-in-out;
-  }
-
-  #logo img {
-    width: 80px;
-    height: auto;
-    display: block;
-  }
-
+ 
+  /* Conteúdo principal */
   .conteudo-titulo {
     position: relative;
     min-height: 100vh;
