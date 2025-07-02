@@ -1,0 +1,100 @@
+/*Página do Obrigado*/
+ .container {
+   z-index: 100;
+   opacity: 100%;
+ }
+
+ .bc-container {
+   width: 100%;
+   height: 120%;
+   min-height: 100vh;
+   top: 0px;
+   left: 0px;
+   z-index: -1;
+   position: fixed;
+
+ }
+
+ .bc-img {
+   width: 100%;
+   height: 120%;
+ }
+ .main {
+   display: flex;
+   align-items: center;
+    z-index: 100;
+   opacity: 100%;
+   justify-content: center;
+   min-height: 100vh;
+   background: #101026;
+   flex-direction: column;
+ }
+
+ .text {
+   font-size: 45px;
+   color: #f5f5f5;
+   margin-bottom: 30px;
+ }
+
+ .paragrafo {
+   color: #f5f5f5;
+   margin-bottom: 50px;
+ }
+
+ .btn {
+   padding: 15px 55px;
+   background: #f5f5f5;
+   text-decoration: none;
+   color: #101026;
+   font-size: 18px;
+   transition: all 0.5s;
+ }
+
+ .btn:hover {
+   border-radius: 16px;
+   background-color: #e53935;
+    color: #fff;
+    cursor: pointer;
+ }
+
+ section {
+   position: relative;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   padding: 10px 45px;
+   background: #1d1d2e;
+   left: -10px;
+   z-index: 3;
+   width: 500px;
+   height: 550px;
+   top: 25px;
+   border-radius: 16px;
+   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+ }
+
+ section h2 {
+   position: static;
+   color: #f5f5f5;
+   font-size: 1.5rem;
+   margin: 0.8rem;
+   margin-top: 10px;
+   margin-bottom: 5px;
+
+ }
+
+ section form {
+   display: flex;
+   position: static;
+   flex-direction: column;
+   z-index: 3;
+   width: 100%;
+ }
+
+ form label {
+   color: #f5f5f5;
+   font-size: 15px;
+   z-index: 1;
+   margin-bottom: 3px;
+ }
