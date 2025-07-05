@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<title>Core CSS Colors</title>
+<style>
+#predefinida {
+    color: green;
+}
+#current-color {
+    background: transparent;
+
+    color: green;
+
+    border: 2px  solid currentColor;
+}
+
+#rgb{
+    color: rgb(255, 130, 45);
+}
+
+#rgba{
+    color: rgba(255, 130, 45, 0.7);
+}
+
+#hexa {
+    color: #ff822d8f;
+}
+
+#hsl {
+    color: hsl(80, 50%, 40%); /* usa roda de cores satuaração e luminosidade */
+}
+
+#hsla {
+    color: hsla(80, 50%, 40%, 0.7); /* usa roda de cores satuaração,luminosidade e transparencia */
+}
+body {
+    background-color: black;
+}
+
+li{
+    background: #575656;
+}
+
+</style>
+<body>
+    <ul>
+        <li id="predefinida">pre definida</li>
+        <li id="current-color">current-color</li>
+        <li id="hexa">hexa-decimal</li>
+        <li id="rgb">rgb</li>
+        <li id="rgba">rgba</li>
+        <li id="hsl">hsl</li>
+        <li id="hsla">hsla</li>
+       
+    </ul>
+</body>
+</html>
