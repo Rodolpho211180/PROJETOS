@@ -34,3 +34,17 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
+
+window.addEventListener('DOMContentLoaded', function() {
+  const menu = document.getElementById('menuPedido');
+  const toggle = document.getElementById('menuToggle');
+  // Abre o menu automaticamente ao entrar
+  menu.classList.add('show');
+  toggle.classList.add('open');
+
+  // Alterna menu e botão X/hambúrguer ao clicar
+  toggle.addEventListener('click', function() {
+    menu.classList.toggle('show');
+    toggle.classList.toggle('open');
+  });
+});

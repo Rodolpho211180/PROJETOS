@@ -336,11 +336,13 @@ nav {
   animation: pulse 1.2s infinite;
 }
 
+/* O menu fica logo abaixo do botão */
 .menu-pedido {
   position: fixed;
-  top: 120px;
-  left: -80px; /* Escondido fora da tela */
+  top: 180px; /* 40px abaixo do botão */
+  left: 0;
   width: 60px;
+  height: 320px;
   background: #22223b;
   z-index: 200;
   border-radius: 0 20px 20px 0;
@@ -349,13 +351,14 @@ nav {
   align-items: center;
   padding-top: 20px;
   box-shadow: 0 0 16px #0004;
-  transition: left 0.5s cubic-bezier(.68,-0.55,.27,1.55); /* Troque right por left */
+  transition: left 0.5s cubic-bezier(.68,-0.55,.27,1.55);
 }
-
+.menu-pedido:not(.show) {
+  left: -80px; /* Esconde só o menu, nunca o botão */
+}
 .menu-pedido.show {
-  left: 0; /* Aparece na tela */
+  left: 0;
 }
-
 .menu-pedido ul {
   display: flex;
   flex-direction: column;
@@ -363,18 +366,15 @@ nav {
   padding: 0;
   margin: 0;
 }
-
 .menu-pedido li {
   list-style: none;
 }
-
 .menu-pedido img {
   width: 40px;
   height: 40px;
   border-radius: 50%;
   transition: transform 0.3s, box-shadow 0.3s;
 }
-
 .menu-pedido img:hover {
   transform: scale(1.2) rotate(-10deg);
   box-shadow: 0 0 12px #fff8;
@@ -383,7 +383,7 @@ nav {
 /* Botão para abrir o menu */
 .menu-toggle {
   position: fixed;
-  top: 300px;
+  top: 140px;
   left: 0;
   width: 40px;
   height: 40px;
@@ -400,9 +400,28 @@ nav {
 }
 
 .menu-toggle:hover {
-  background: rgba(0, 0, 0, 0.9);
+  background: #b71c1c;
 }
 
+/* Ícone hambúrguer/X animado */
+.menu-toggle .bar {
+  width: 28px;
+  height: 4px;
+  background: #fff;
+  margin: 4px 0;
+  border-radius: 2px;
+  transition: 0.4s;
+  display: block;
+}
+.menu-toggle.open .bar1 {
+  transform: rotate(-45deg) translate(-6px, 6px);
+}
+.menu-toggle.open .bar2 {
+  opacity: 0;
+}
+.menu-toggle.open .bar3 {
+  transform: rotate(45deg) translate(-6px, -6px);
+}
 footer {
   width: 100%;
   color: #fff;
