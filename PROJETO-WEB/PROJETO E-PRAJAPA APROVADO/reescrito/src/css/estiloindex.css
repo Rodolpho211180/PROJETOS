@@ -339,9 +339,9 @@ nav {
 /* O menu fica logo abaixo do botão */
 .menu-pedido {
   position: fixed;
-  top: 180px; /* 40px abaixo do botão */
+  top: 300px; /* 40px abaixo do botão */
   left: 0;
-  width: 60px;
+  width: 200px;
   height: 320px;
   background: #22223b;
   z-index: 200;
@@ -354,7 +354,7 @@ nav {
   transition: left 0.5s cubic-bezier(.68,-0.55,.27,1.55);
 }
 .menu-pedido:not(.show) {
-  left: -80px; /* Esconde só o menu, nunca o botão */
+  left: -200px; /* Esconde só o menu, nunca o botão */
 }
 .menu-pedido.show {
   left: 0;
@@ -383,45 +383,47 @@ nav {
 /* Botão para abrir o menu */
 .menu-toggle {
   position: fixed;
-  top: 140px;
+  top: 240px;
   left: 0;
-  width: 40px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
   background: #e53935;
   color: #fff;
-  border-radius: 0 20px 20px 0;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   z-index: 201;
-  font-size: 2rem;
   transition: background 0.3s;
 }
-
 .menu-toggle:hover {
   background: #b71c1c;
 }
 
 /* Ícone hambúrguer/X animado */
 .menu-toggle .bar {
-  width: 28px;
+  width: 32px;
   height: 4px;
   background: #fff;
   margin: 4px 0;
   border-radius: 2px;
-  transition: 0.4s;
+  transition: 0.4s cubic-bezier(.68,-0.55,.27,1.55);
   display: block;
+  position: relative;
 }
+
+/* Animação para virar X centralizado */
 .menu-toggle.open .bar1 {
-  transform: rotate(-45deg) translate(-6px, 6px);
+  transform: translateY(9px) rotate(-45deg);
 }
 .menu-toggle.open .bar2 {
   opacity: 0;
 }
 .menu-toggle.open .bar3 {
-  transform: rotate(45deg) translate(-6px, -6px);
+  transform: translateY(-15px) rotate(50deg);
 }
+
 footer {
   width: 100%;
   color: #fff;
