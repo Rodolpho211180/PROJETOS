@@ -221,14 +221,7 @@ nav {
 
 /* Botões e links fixos */
 
-#pedido {
-  position: fixed;
-  width: 120px;
-  bottom: 10px;
-  display: block;
-  left: 15px;
-  bottom: 20px;
-}
+
 
 #googleplay {
   width: 150px;
@@ -257,14 +250,13 @@ nav {
   transition: 0.3s ease-in-out;
 }
 
-#pedido,
 #googleplay,
 #itunes {
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
 }
 
-#pedido:hover,
+
 #googleplay:hover,
 #itunes:hover {
   transform: scale(1.2);
@@ -339,10 +331,11 @@ nav {
 /* O menu fica logo abaixo do botão */
 .menu-pedido {
   position: fixed;
-  top: 300px; /* 40px abaixo do botão */
+  top: 220px; /* 40px abaixo do botão */
   left: 0;
   width: 200px;
-  height: 320px;
+  height: 460px;
+  gap: 10px;
   background: #22223b;
   z-index: 200;
   border-radius: 0 20px 20px 0;
@@ -350,40 +343,69 @@ nav {
   flex-direction: column;
   align-items: center;
   padding-top: 20px;
-  box-shadow: 0 0 16px #0004;
+}
+
+.menu-pedido h3 {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.menu-pedido li {
+  list-style: none;
+  width: 100%;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.menu-pedido {
+  left: -220px; /* Escondido fora da tela */
   transition: left 0.5s cubic-bezier(.68,-0.55,.27,1.55);
 }
 .menu-pedido:not(.show) {
   left: -200px; /* Esconde só o menu, nunca o botão */
 }
 .menu-pedido.show {
-  left: 0;
+  left: 0; /* Visível */
 }
-.menu-pedido ul {
+
+.menu-btn {
+  width: 95%;
+  height: 100px;
+  background: transparent;
+  border: none;
   display: flex;
-  flex-direction: column;
-  gap: 25px;
-  padding: 0;
-  margin: 0;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
 }
-.menu-pedido li {
-  list-style: none;
+
+.menu-btn:hover {
+  background: #22223b;
+  transform: scale(1.05);
 }
-.menu-pedido img {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
+
+.menu-btn img {
+  width: 150px;
+  height: 90px;
+  object-fit:fill; 
   transition: transform 0.3s, box-shadow 0.3s;
 }
-.menu-pedido img:hover {
-  transform: scale(1.2) rotate(-10deg);
+
+.menu-btn:hover img {
+  transform: scale(1.12) rotate(-8deg);
   box-shadow: 0 0 12px #fff8;
 }
+
 
 /* Botão para abrir o menu */
 .menu-toggle {
   position: fixed;
-  top: 240px;
+  top: 160px;
   left: 0;
   width: 60px;
   height: 60px;
