@@ -424,14 +424,14 @@
 }
 
 
- /* O menu fica logo abaixo do botão */
+/* O menu fica logo abaixo do botão */
 .menu-pedido {
   position: fixed;
   top: 220px; /* 40px abaixo do botão */
   left: 0;
-  width: 200px;
-  height: 460px;
-  gap: 10px;
+  width: 250px;
+  height: 472px;
+  gap: 25px;
   background: #22223b;
   z-index: 200;
   border-radius: 0 20px 20px 0;
@@ -444,8 +444,9 @@
 .menu-pedido h3 {
   color: #fff;
   text-align: center;
-  margin-bottom: 20px;
-  font-size: 1.1rem;
+  margin-top: -15px;
+  margin-bottom: 23px;
+  font-size: 1.4rem;
   font-weight: 600;
 }
 
@@ -462,7 +463,7 @@
   transition: left 0.5s cubic-bezier(.68,-0.55,.27,1.55);
 }
 .menu-pedido:not(.show) {
-  left: -200px; /* Esconde só o menu, nunca o botão */
+  left: -250px; /* Esconde só o menu, nunca o botão */
 }
 .menu-pedido.show {
   left: 0; /* Visível */
@@ -472,7 +473,7 @@
   width: 95%;
   height: 100px;
   background: transparent;
-  border: none;
+  border-radius: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -487,14 +488,25 @@
 
 .menu-btn img {
   width: 150px;
-  height: 90px;
+  height: 100px;
+  border: none;
+  border-radius: 20px;
   object-fit:fill; 
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .menu-btn:hover img {
-  transform: scale(1.12) rotate(-8deg);
-  box-shadow: 0 0 12px #fff8;
+  transform: scale(1.15) translateY(-18px);
+  box-shadow: 0 8px 24px #fff8;
+}
+
+#ifood {
+  margin-top: -13px;
+}
+
+#anotaai {
+  margin-top: 4px;
+  margin-bottom: 4px;
 }
 
 
