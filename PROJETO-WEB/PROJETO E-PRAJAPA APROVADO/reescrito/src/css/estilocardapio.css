@@ -10,29 +10,15 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Poppins", sans-serif;
-  max-width: 1280px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background: #f5f5f5;
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
-.container {
-  max-width: 1920px;
-  width: 100%;
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
-  z-index: 100;
-  opacity: 100%;
-}
-
-/* Cabeçalho e logo */
 header {
   width: 100%;
   height: 70px;
   background: rgba(255, 255, 255, 0.5);
-  /* só o fundo translúcido */
   position: fixed;
   top: 0;
   left: 0;
@@ -42,9 +28,39 @@ header {
   justify-content: center;
   padding: 0 40px;
   box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.3);
-  /* NÃO USE opacity aqui! */
 }
 
+.container {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 70px; /* altura exata do header fixo */
+  box-sizing: border-box;
+}
+
+.conteudo-central {
+  width: 100vw;
+  margin: 0; /* remove margem superior */
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex: 1;
+  overflow-y: auto;
+  min-height: calc(100vh - 70px); /* ocupa toda a altura abaixo do header */
+}
+
+.cardapio-iframe {
+  width: 100vw;
+  height: calc(100vh - 70px); /* ocupa toda a altura abaixo do header */
+  min-height: 0;
+  border-radius: 0;
+  border: none;
+  box-shadow: 0 4px 24px #0002;
+  background: #fff;
+  display: block;
+}
 nav {
   width: 100%;
   display: flex;
@@ -106,15 +122,6 @@ nav {
   color: #fff;
 }
 
-/* Slider */
-#slider {
-  max-width: 100vw;
-  max-height: 500px;
-  margin: 40px auto 0 auto;
-  position: fixed;
-  z-index: -1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
+
+
+
