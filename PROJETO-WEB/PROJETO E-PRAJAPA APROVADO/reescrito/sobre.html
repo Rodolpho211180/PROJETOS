@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contato</title>
+    <link rel="stylesheet" href="./src/css/reset.css" />
+    <link rel="stylesheet" href="./src/css/estilocontato.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body class="contato">
+          
+    <main class="container">
+
+        <div class="bc-container">
+                <img class="bc-img" src="./src/imagens/backcardapio.jpg" alt="background_contato" />
+            </div>
+
+    <header>
+      <div class="logo" >
+        <img src="./src/imagens/logo.png" alt="Logo E-PRAJAPA" id="logo-img">
+        </div>
+      <nav>
+        <ul id="menu">
+          <li><a href="index.html" class="botaolista">Início</a></li>
+           <a href="cardapio.html" class="botaolista">Cardápio</a>
+          <li><a href="sobre.html" class="botaolista active">Sobre Nós</a></li>
+          <li><a href="contato.html" class="botaolista">Contato</a></li>
+        </ul>
+      </nav>
+    </header>
+            
+       <div class="pedidologo">
+                <a href="https://eprajapa.ccmpedidoonline.com.br/" target="_blank">
+                    <img class="pedido" src="./src/imagens/pedido.png" alt="Faça seu Pedido">
+                </a>
+            </div>
+            
+            
+            <section>
+                <h1 style=color:white font="optional">Entre em contato conosco</h1>
+                
+                <form action="https://api.staticforms.xyz/submit" method="post">
+                    <label>Nome</label>
+                    <input type="text" name="name" placeholder="Digite seu nome" autocomplete="off" required />
+                    <label>Email</label>
+                    <input type="email" name="email" placeholder="Digite seu email" autocomplete="off" required />
+                    <label>Mensagem</label>
+                    <textarea name="message" cols="30" rows="10" placeholder="Digite sua mensagem" required></textarea>
+                    <button type="submit">Enviar</button>
+                    <input type="hidden" name="accessKey" value="042be0d3-84fa-4ae8-aaed-2434cda72cac" />
+                    <input type="hidden" name="redirectTo" value="http://127.0.0.1:5500/PROJETO-WEB/PROJETO%20E-PRAJAPA%20APROVADO/reescrito/obcontato.html" />
+                </form>
+               
+    </section>
+    <ul class="menu-lateral">
+      <li>
+        <a href="https://www.facebook.com/EPRAJAPA1/" target="_blank">
+          <img src="./src/imagens/facebook.png" alt="ícone facebook" id="facebook" />
+        </a>
+      </li>
+      <li>
+        <a href="https://www.instagram.com/eprajapa/" target="_blank">
+          <img src="./src/imagens/instagram.png" alt="ícone instagram" id="instagram" />
+        </a>
+      </li>
+      <li>
+        <a href="https://api.whatsapp.com/send?phone=5521979984218&text=Quero%20um%20Japa" target="_blank">
+          <img src="./src/imagens/whatsapp.png" alt="icone whatsapp" id="wattsapp" />
+        </a>
+      </li>
+    </ul>
+
+  <div class="menu-toggle" id="menuToggle">
+  <span class="bar bar1"></span>
+  <span class="bar bar2"></span>
+  <span class="bar bar3"></span>
+</div>
+   <ul class="menu-pedido" id="menuPedido">
+  <h3 id="titulo_menu">Faça seu Pedido</h3>
+  <li>
+    <a href="https://www.ifood.com.br/" target="_blank" class="menu-btn" id ="ifood">
+      <img src="./src/imagens/ifood.png" alt="ifood">
+    </a>
+  </li>
+  <li>
+    <a href="https://pedido.anota.ai/loja/e-pra-japa/" target="_blank" class="menu-btn" id ="anotaai">
+      <img src="./src/imagens/anota ai.jpg" alt="Anotaai">
+    </a>
+  </li>
+  <li>
+    <a href="https://eprajapa2.ccmpedidoonline.com.br/" target="_blank" class="menu-btn" id ="ccm">
+      <img src="./src/imagens/ccm pedidos.png" alt="ccm pedidos">
+    </a>
+  </li>
+</ul>
+        </main>
+        <script src="./src/js/script.js"></script>
+    </body>
+</html>
