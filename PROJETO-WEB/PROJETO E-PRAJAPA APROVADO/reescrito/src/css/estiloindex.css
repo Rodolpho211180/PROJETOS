@@ -17,15 +17,7 @@ body {
   align-items: center;
 }
 
-.container {
-  max-width: 1920px;
-  width: 100%;
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
-  z-index: 100;
-  opacity: 100%;
-}
+
 
 /* Cabeçalho e logo */
 header {
@@ -49,6 +41,16 @@ nav {
   width: 100%;
   display: flex;
   justify-content: center;
+}
+
+.container {
+  max-width: 1920px;
+  width: 100%;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 100;
+  opacity: 100%;
 }
 
 .logo {
@@ -367,7 +369,7 @@ nav {
   transition: left 0.5s cubic-bezier(.68,-0.55,.27,1.55);
 }
 .menu-pedido:not(.show) {
-  left: -200px; /* Esconde só o menu, nunca o botão */
+  left: -250px; /* Esconde só o menu, nunca o botão */
 }
 .menu-pedido.show {
   left: 0; /* Visível */
