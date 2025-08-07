@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Relatório de Vendas</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <h1>Relatório de Vendas por Produto</h1>
+  <form action="/index" method="POST">
+    <label>Código do Produto:</label>
+    <input type="text" name="codprod" required><br><br>
+
+    <label>Data Início:</label>
+    <input type="date" name="data_inicio" required>
+
+    <label>Hora Início:</label>
+    <input type="time" name="hora_inicio" value="00:00"><br><br>
+
+    <label>Data Fim:</label>
+    <input type="date" name="data_fim" required>
+
+    <label>Hora Fim:</label>
+    <input type="time" name="hora_fim" value="23:59"><br><br>
+
+    <label>Dia da Semana (opcional):</label>
+    <select name="dia_semana">
+      <option value="">-- Todos --</option>
+      <option value="0">Domingo</option>
+      <option value="1">Segunda</option>
+      <option value="2">Terça</option>
+      <option value="3">Quarta</option>
+      <option value="4">Quinta</option>
+      <option value="5">Sexta</option>
+      <option value="6">Sábado</option>
+    </select><br><br>
+
+    <label>Mês (opcional):</label>
+    <select name="mes">
+      <option value="">-- Todos --</option>
+      <option value="1">Janeiro</option>
+      <option value="2">Fevereiro</option>
+      <option value="3">Março</option>
+      <option value="4">Abril</option>
+      <option value="5">Maio</option>
+      <option value="6">Junho</option>
+      <option value="7">Julho</option>
+      <option value="8">Agosto</option>
+      <option value="9">Setembro</option>
+      <option value="10">Outubro</option>
+      <option value="11">Novembro</option>
+      <option value="12">Dezembro</option>
+    </select><br><br>
+
+    <button type="submit">Gerar Relatório</button>
+  </form>
+</body>
+</html>
