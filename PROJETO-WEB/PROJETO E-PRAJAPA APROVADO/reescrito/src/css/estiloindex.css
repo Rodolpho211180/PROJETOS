@@ -336,8 +336,8 @@ nav {
   top: 220px; /* 40px abaixo do botão */
   left: 0;
   width: 250px;
-  height: 472px;
-  gap: 25px;
+  height: 600px;
+  gap: 20px;
   background: #22223b;
   z-index: 200;
   border-radius: 0 20px 20px 0;
@@ -376,8 +376,8 @@ nav {
 }
 
 .menu-btn {
-  width: 95%;
-  height: 100px;
+  width: 90px;
+  height: auto;
   background: transparent;
   border-radius: 30px;
   display: flex;
@@ -393,8 +393,8 @@ nav {
 }
 
 .menu-btn img {
-  width: 150px;
-  height: 100px;
+  width: 90px;
+  height: 90px;
   border: none;
   border-radius: 20px;
   object-fit:fill; 
