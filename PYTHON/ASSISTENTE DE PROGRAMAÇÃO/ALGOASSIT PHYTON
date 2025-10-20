@@ -16,8 +16,6 @@ def extrair_texto_pdf(nome_arquivo):
             page = reader.pages[page_num]
             texto += page.extract_text()
     return texto
-
-# Função para treinar o chatbot com base no texto extraído
 def treinar_chatbot_com_livro(chatbot, nome_arquivo_pdf):
     texto = extrair_texto_pdf(nome_arquivo_pdf)
     trainer = ChatterBotCorpusTrainer(chatbot)
