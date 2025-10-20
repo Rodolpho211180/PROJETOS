@@ -1,5 +1,5 @@
 from chatterbot import ChatBot
-from chatterbot.trainers import ChatterBotCorpusTrainer
+from chatterbot.trainers import ChatterBotCorpusTrainer, ListTrainer
 import sqlite3
 from PyPDF2 import PdfReader
 import wikipedia
@@ -14,37 +14,33 @@ def extrair_texto_pdf(nome_arquivo):
         num_pages = len(reader.pages)
         for page_num in range(num_pages):
             page = reader.pages[page_num]
-            texto += page.extract_text()
+            # extract_text() pode retornar None; garantir string
+            text_page = page.extract_text() or ''
+            texto += text_page
     return texto
 def treinar_chatbot_com_livro(chatbot, nome_arquivo_pdf):
     texto = extrair_texto_pdf(nome_arquivo_pdf)
+    # Usar ListTrainer para treinar com sentenças extraídas do PDF
+    trainer = ListTrainer(chatbot)
+    # dividir o texto em linhas (ou frases) e filtrar vazias
+    sentences = [line.strip() for line in texto.splitlines() if line.strip()]
+    if sentences:
+        trainer.train(sentences)
     trainer = ChatterBotCorpusTrainer(chatbot)
     trainer.train(texto)
 
-# Função para iniciar a conversa com o chatbot
-def iniciar_conversa(chatbot):
-    print("Olá! Como posso ajudá-lo hoje com Python?")
-
-# Função para interagir com o chatbot
-def interagir(chatbot, conexao, usuario):
     cursor = conexao.cursor()
     cursor.execute("""
     CREATE TABLE IF NOT EXISTS conversas (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         usuario TEXT NOT NULL,
         pergunta TEXT NOT NULL,
-        resposta TEXT NOT NULL,
+        resposta TEXT,
         satisfatorio BOOLEAN,
         resposta_corrigida TEXT
     )
     """)
-    
-    # Verificar se a coluna resposta_corrigida já existe
-    cursor.execute("PRAGMA table_info(conversas)")
-    columns = cursor.fetchall()
-    column_names = [column[1] for column in columns]
-    
-    if 'resposta_corrigida' not in column_names:
+    conexao.commit()
         # Adicionar coluna resposta_corrigida, se ainda não existir
         cursor.execute("""
         ALTER TABLE conversas 
