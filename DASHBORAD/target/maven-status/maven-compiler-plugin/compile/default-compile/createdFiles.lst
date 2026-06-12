@@ -1,0 +1,4 @@
+com\favoritos\service\FavoritoService.class
+com\favoritos\controller\FavoritoController.class
+com\favoritos\DashboardApplication.class
+com\favoritos\model\Favorito.class
